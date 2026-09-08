@@ -1,0 +1,60 @@
+name: 普通使用问题 / General question
+description: 公开反馈 Voltyn 使用问题。不要提交任何私密信息或诊断材料。
+title: "[使用问题] "
+body:
+  - type: markdown
+    attributes:
+      value: |
+        这是公开 Issue，任何人都可能查看内容及你的 GitHub 身份。
+        **禁止附上诊断日志、诊断包、设备序列号、账号信息、密码、支付资料或其他私人内容。**
+        仅填写最小必要的非敏感信息。若需要提供私密材料，必须先安排并确认私密渠道；此表单不是私密上传入口。
+        Voltyn 尚未上架。这里不保证回复时限或退款结果。
+  - type: input
+    id: app-version
+    attributes:
+      label: Voltyn 版本
+      description: 仅版本号；尚未使用时填写“尚未使用”。
+    validations:
+      required: true
+  - type: input
+    id: macos-version
+    attributes:
+      label: macOS 版本
+      description: 仅系统版本；不要填写设备名称、序列号或账号信息。
+    validations:
+      required: true
+  - type: dropdown
+    id: affected-view
+    attributes:
+      label: 涉及位置
+      options:
+        - 菜单栏
+        - 桌面 Widget
+        - Details 历史
+        - 网站或支持说明
+        - 其他普通使用问题
+    validations:
+      required: true
+  - type: textarea
+    id: expected
+    attributes:
+      label: 期望表现
+      description: 用简短文字描述，不附日志或私人资料。
+    validations:
+      required: true
+  - type: textarea
+    id: observed
+    attributes:
+      label: 实际表现与最少复现步骤
+      description: 只写非敏感文字。请勿粘贴或上传诊断文件、账号信息或设备标识。
+    validations:
+      required: true
+  - type: checkboxes
+    id: privacy
+    attributes:
+      label: 公开内容确认
+      options:
+        - label: 我理解内容与 GitHub 身份将公开，且没有提供诊断日志、序列号、账号信息、密码、支付资料或其他私人信息。
+          required: true
+        - label: 我理解此入口不提供私密上传，也不保证回复时限或退款结果。
+          required: true
